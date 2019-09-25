@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+        #list {
+            background-color: #eee;
+            width: 500px;
+            height: 200px;
+            padding: 20px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="click-me">Check the console!</h1>
+    <input type="text" id="name" />
+    <button id="submit">Add Name to List</button>
+    <ul id="list"></ul>
+    <img src="https://placekitten.com/400/300" alt="kitten"/>
+    <script>
+        $("#click-me").click(function() {
+            $('img').slideToggle();
+        });
+
+        $("#submit").click(function() {
+            var name = $("#name").val();
+            $("#name").val("");
+            $("#list").append("<li>" + name + "</li>");
+        });
+
+        // document.getElementById("click-me").addEventListener("click", function() {
+        //     alert(13);
+        // });
+    </script>
+</body>
+</html>
